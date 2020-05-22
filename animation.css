@@ -32,7 +32,8 @@
 }
 
 .card {
-  background-color: rgb(36, 243, 147);
+
+  background-color: rgb(0,191,255);
   animation: cardEntrance 700ms ease-out;
   animation-fill-mode: backwards;
 }
