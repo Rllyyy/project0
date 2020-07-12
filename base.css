@@ -4,7 +4,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.card {
+.animated-grid  >.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,9 +22,57 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    background-color: rgb(0,191,255);
+    animation: cardEntrance 500ms ease-out;
+    animation-fill-mode: backwards;
  }
 
 .card:hover {
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
     transform: translateY(-3px) scale(1.1);
+ }
+
+ .row > div {
+   padding: 20px;
+   background-color: lightblue;
+   border: 2px solid black;
+   margin:5px;
+ }
+ .container {
+   display: inline-flex;
+   flex-wrap:wrap;
+   width: 100%;
+ }
+ .container > div {
+   background-color: rgb(0,191,255);
+   margin: 10px;
+   width: 500px;
+   height:300px;
+   font-size: 24px;
+   display:flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+ }
+ .container >.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: #353535;
+   font-size: 2rem;
+   color: #fff;
+   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+   border-radius: 4px;
+   transition: all 500ms;
+   overflow: hidden;
+
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+   background-color: rgb(0,191,255);
+   animation: cardEntrance 500ms ease-out;
+   animation-fill-mode: backwards;
  }
