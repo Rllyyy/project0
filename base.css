@@ -45,16 +45,19 @@ body {
    width: 100%;
  }
  .container > div {
+   /*
    background-color: rgb(0,191,255);
    margin: 10px;
-   width: 500px;
-   height:300px;
+   width: 600px;
+   height:400px;
    font-size: 24px;
-   display:flex;
    text-align: center;
    justify-content: center;
    align-items: center;
+   */
+   /*display: inline-block; */
  }
+
  .container >.card {
    display: flex;
    flex-direction: column;
@@ -75,4 +78,14 @@ body {
    background-color: rgb(0,191,255);
    animation: cardEntrance 500ms ease-out;
    animation-fill-mode: backwards;
+
+   /*Aus .container > div*/
+   background-color: rgb(0,191,255);
+   margin: 10px;
+   width: 600px;
+   height:400px;
+   font-size: 24px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
  }
