@@ -98,3 +98,25 @@
   grid-area: 🌟;
   animation-delay: calc(8 * var(--stagger-delay));
 }
+
+/*
+.imageBox {
+
+   background-color: rgb(0,191,255);
+  animation: cardEntrance2 700ms ease-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes cardEntrance2 {
+  from {
+    background: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+  }
+  to {
+
+    background-color:white;
+    background-position:left bottom;
+  }
+}
+*/
