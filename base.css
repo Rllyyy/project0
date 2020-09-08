@@ -1,14 +1,14 @@
-
 body {
-    background: #21252B;
-    color:#F1F1F1 ;
-    font-family: 'Century Gothic',arial, sans-serif;
-    font-size: 62.5%; /*1 rem = 10px */
-    margin: 0;
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-smoothing: subpixel-antialiased;
+  background: #21252B;
+  color: #F1F1F1;
+  font-family: 'Century Gothic', arial, sans-serif;
+  font-size: 62.5%;
+  /*1 rem = 10px */
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+  scroll-behavior: smooth;
 }
-
 
 h1 {
   text-align: center;
@@ -38,28 +38,23 @@ h1 {
   justify-content: center;
   align-content: center;
   /*flex-direction: row;*/
-
   /*grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));*/
 }
 
-.box{
+.box {
   min-height: 300px;
   display: grid;
   max-width: 350px;
   min-width: 350px;
-
   background: #F2F1F2;
   border-radius: 20px;
   /*transition: all .12s ease-in-out;* !*/
   transform: translate(0px, 0);
   transition: -webkit-transform 0.2s ease-in-out;
-
   -webkit-transform: translate(0px, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
-
   -moz-transform: translate(0px, 0);
   -moz-transition: -moz-transform 0.2s ease-in-out;
-
   overflow: hidden;
 }
 
@@ -67,8 +62,8 @@ h1 {
   position: relative;
   /*Fixes the text-jaggering on the hovering event for Firefox*/
   -moz-transform: rotate(0.02deg);
-
 }
+
 .boxHeading {
   font-weight: lighter;
   text-align: center;
@@ -76,7 +71,7 @@ h1 {
   display: table;
   margin: 0 auto;
   padding-top: 10px;
-  color: Black;
+  color: black;
 }
 
 .boxText {
@@ -85,7 +80,6 @@ h1 {
   display: flex;
   color: #383838;
   line-height: 1.3;
-
   margin-left: 14%;
   margin-right: 12%;
   padding-top: 5px;
@@ -94,7 +88,6 @@ h1 {
 .imageBox {
   width: 100%;
   background: white;
-
   margin: 0 auto 0 auto;
 }
 
@@ -111,38 +104,31 @@ h1 {
 .button {
   border: 2px solid #616161;
   border-radius: 30px;
-
   text-align: center;
   color: #616161;
   font-size: 1.1rem;
   /*font-weight: bold;*/
-
   width: 80%;
   position: absolute;
   bottom: 25px;
   right: 10%;
-
-
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
-
   margin: 0px;
-
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-
   /*display: inline;*/
   text-decoration: none;
-
   backface-visibility: hidden;
 }
+
 .box:nth-child(1) .button {
   background: linear-gradient(225deg, white 22%, #FFC14F 35%, red);
   background: linear-gradient(225deg, white 22%, #14b1a9 35%, #0b0bfd);
   background-size: 450% 105%;
   background-position: right top;
-  transition:all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .box:nth-child(2) .button {
@@ -150,7 +136,7 @@ h1 {
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
-  transition:all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .box:nth-child(3) .button {
@@ -158,27 +144,26 @@ h1 {
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, blue);
   background-size: 450% 105%;
   background-position: right top;
-  transition:all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .box:nth-child(4) .button {
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, blue);
   background-size: 450% 105%;
   background-position: right top;
-  transition:all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .box:hover .button {
   background-position: center center;
   /*background-size:300% 100%;*/
-
-  color:black;
+  color: black;
   border-color: #383838;
 }
-.box:hover:nth-child(4) .button{
-  color: #FFFFFF ;
-}
 
+.box:hover:nth-child(4) .button {
+  color: #FFFFFF;
+}
 
 .ParentVHHeading {
   /*makes the title above the parentBox */
@@ -197,25 +182,12 @@ h1 {
   height: 100vh;
   width: 100%;
   display: flex;
+  background: #A1A0A1;
 }
 
-/*Ingnore section 2 and 3 */
-.SectionHeading2 {
-  width:255px;
- height:355px;
- background:  linear-gradient(45deg, white, white) , linear-gradient(180deg, red, orange, white);
- background-position: 0px 205px, 0px 0px;
- background-repeat: no-repeat, no-repeat;
- background-size: 255px 50px, 255px 233px;
+.box:nth-child(8), .box:nth-child(7), .box:nth-child(6) {
+  display: none;
 }
-.SectionHeading3 {
-  width:500px;
-  height: 500px;
- background:  linear-gradient(225deg, white 35%, #14b1a9 60%, #1451b1);
- background-repeat: repeat-x;
- background-size: 300px 100px;
-}
-
 
 /*mediaQuerry for mobile*/
 @media (max-width: 510px) {
@@ -226,16 +198,18 @@ h1 {
   .box {
     max-width: 100%
   }
+
   .box:hover {
-    transform:scale(1.05);
-    -webkit-transform:scale(1.05);
-    -ms-transform:scale(1.05);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     overflow: hidden;
   }
 
   .boxHeading {
     padding-top: 3px;
   }
+
   .boxText {
     font-size: 1rem;
     margin-top: 2%;
@@ -253,7 +227,7 @@ h1 {
     height: 70px;
   }
 
-  .box{
+  .box {
     min-height: 280px;
   }
 }
@@ -262,52 +236,13 @@ h1 {
   .SectionHeading::after {
     content: "Desktop-User";
   }
-  .box:hover{
-    transform:scale(1.1);
-    -webkit-transform:scale(1.1);
-    -moz-transform:scale(1.1);
-    -ms-transform:scale(1.1);
-    overflow: auto;
 
+  .box:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.0);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    overflow: hidden;
   }
 }
-
-
-
-/*
-@media (min-width: 1700px) {
-  h1::after {
-    content: "Desktop-User"
-  }
-  .container >.card {
-       width: 23.5%;
-       height: 400px;
-     }
-}
-
-
-@media (max-width: 1299px) and (min-width:860px) {
-  h1::after {
-    content: "Großer Mobile-User"
-  }
-  .container >.card {
-    width: 47%;
-  }
-}
-@media (max-width: 1699px) and (min-width:1300px) {
-  h1::after {
-    content: "Kleiner Desktop"
-  }
-  .container >.card {
-    width: 31.5%;
-  }
-}
-@media screen and (max-height:1000px) {
-  h1::before {
-    content: "Hello "
-  }
-  .ParentVH {
-    height: 450vh;
-    }
-}
-*/
