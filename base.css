@@ -1,17 +1,116 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   background: #21252B;
   color: #F1F1F1;
   font-family: 'Century Gothic', arial, sans-serif;
   font-size: 62.5%;
-  /*1 rem = 10px */
-  margin: 0;
+  line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
-  scroll-behavior: smooth;
+
 }
 
 h1 {
+  /*text-align: center;*/
+}
+.Landing {
+  /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
+  background-image: url("./images/LandingBackground_blur.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LandingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.content h1 {
+  font-weight: lighter;
+  margin:0;
+  font-family: arial;
+  font-size: 9rem;
+  line-height: 1;
+}
+@keyframes LoadExpiriences {
+  0% {
+
+    background-position: right top;
+
+  }
+  100% {
+
+    background-position: left center;
+
+  }
+}
+#Developing {
+  text-shadow: white 0px 0px 1px;
+}
+
+#Experiences {
+  font-weight: bold;
+  /*color: red;*/
+
+  font-size: 11rem;
+  letter-spacing: 0.3rem;
+
+  background: linear-gradient(225deg, white 22%, #F1AEFF 85%, #0054D5);
+  background-size: 450% 105%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 3s ease 0s 1 LoadExpiriences;
+}
+
+
+#btn {
+  border: 2px;
+  border-radius: 30px;
+
+
+  text-align: center;
+
+  color: black;
+  font-size: 2rem;
+
+  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
+  background-size: 450% 105%;
+  background-position: center center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  width: 500px;
+
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+
+  margin: 300px auto 200px auto;
+
+  text-transform: uppercase;
+
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  /*display: inline;*/
+
+  text-decoration: none;
+  backface-visibility: hidden;
 }
 
 .ParentVH {
@@ -19,15 +118,17 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   background: #282C34;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.ParentVHHeading {
+  /*makes the title above the parentBox */
+  flex-basis: 100%;
+  margin-bottom: 20px;
 }
 
 .parentBox {
   width: 100%;
-  /*
-  margin-left: 1%;
-  margin-right: 1%;
-  */
   display: flex;
   flex-wrap: wrap;
   padding-left: 1.5em;
@@ -165,11 +266,7 @@ h1 {
   color: #FFFFFF;
 }
 
-.ParentVHHeading {
-  /*makes the title above the parentBox */
-  flex-basis: 100%;
-  margin-bottom: 5px;
-}
+
 
 .SectionHeading {
   text-align: center;
@@ -191,6 +288,9 @@ h1 {
 
 /*mediaQuerry for mobile*/
 @media (max-width: 510px) {
+  .content h1 {
+  font-size: 3rem;
+}
   .SectionHeading::after {
     content: "Mobile-User"
   }
