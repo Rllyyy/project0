@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -22,8 +23,8 @@ h1 {
 }
 .Landing {
   /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
-  background-image: url("./images/LandingBackground_blur.jpeg");
-
+  /* background-image: url("./images/LandingBackground_blur.jpeg"); */
+  background-image: url("./images/LandingBackground_blurdark.jpeg");
   background-size: cover;
   background-position: center;
   height: 75vh;
@@ -43,7 +44,7 @@ h1 {
   font-weight: lighter;
   margin:0;
   font-family: arial;
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 1;
 }
 @keyframes LoadExpiriences {
@@ -60,16 +61,20 @@ h1 {
 }
 #Developing {
   text-shadow: white 0px 0px 1px;
+  color: #F2F1F2;
+  font-family: 'Century Gothic';
 }
 
 #Experiences {
-  font-weight: bold;
-  /*color: red;*/
+  font-family: 'Indie Flower',cursive;
+  padding-bottom: 20px;
 
   font-size: 11rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5rem;
 
   background: linear-gradient(225deg, white 22%, #F1AEFF 85%, #0054D5);
+  background: linear-gradient(225deg, white 22%, rgba(241, 174, 255,1) 85%, rgba(85, 141, 227,1));
+
   background-size: 450% 105%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -80,7 +85,7 @@ h1 {
 #btn {
   border: 2px;
   border-radius: 30px;
-
+  opacity: 0.85;
 
   text-align: center;
 
@@ -88,6 +93,7 @@ h1 {
   font-size: 2rem;
 
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
+
   background-size: 450% 105%;
   background-position: center center;
 
@@ -138,8 +144,6 @@ h1 {
   grid-row-gap: 20px;
   justify-content: center;
   align-content: center;
-  /*flex-direction: row;*/
-  /*grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));*/
 }
 
 .box {
@@ -159,6 +163,48 @@ h1 {
   overflow: hidden;
 }
 
+/*!remove Test if darker Mode is better*/
+
+.box:nth-child(2) {
+  background: #1C1E22;
+}
+
+.box:nth-child(2) .boxText{
+  color: #C8C8C8;
+}
+.box:nth-child(2) .imageBox, .box:nth-child(2) img{
+  background-color: #6F7277;
+}
+
+.box:nth-child(2) .boxHeading{
+  color: white;
+}
+.box:nth-child(2) a{
+  color: white;
+  border: 2px solid black;
+}
+
+
+.box:nth-child(3) {
+  background: #C0BFC0;
+}
+
+.box:nth-child(3) .boxText{
+  color: #383838;
+}
+.box:nth-child(3) .imageBox, .box:nth-child(3) img{
+  background-color: #F2F1F2;
+}
+
+.box:nth-child(3) .boxHeading{
+  color: black;
+}
+.box:nth-child(3) a{
+  color: #383838;
+  border: 2px solid black;
+}
+
+
 .boxInside {
   position: relative;
   /*Fixes the text-jaggering on the hovering event for Firefox*/
@@ -171,7 +217,7 @@ h1 {
   font-size: 1.7rem;
   display: table;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 8px;
   color: black;
 }
 
@@ -224,17 +270,17 @@ h1 {
   backface-visibility: hidden;
 }
 
+
+
 .box:nth-child(1) .button {
-  background: linear-gradient(225deg, white 22%, #FFC14F 35%, red);
-  background: linear-gradient(225deg, white 22%, #14b1a9 35%, #0b0bfd);
+  background: linear-gradient(225deg, white 23%, #F1AEFF 40%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
   transition: all 0.7s ease;
 }
 
 .box:nth-child(2) .button {
-  background: linear-gradient(225deg, white 22%, #14b1a9 35%, #0b0bfd);
-  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
+  background: linear-gradient(225deg, #3a3f44 23%, #F1AEFF 45%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
   transition: all 0.7s ease;
@@ -242,14 +288,14 @@ h1 {
 
 .box:nth-child(3) .button {
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
-  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, blue);
+  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
   transition: all 0.7s ease;
 }
 
 .box:nth-child(4) .button {
-  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, blue);
+  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
   transition: all 0.7s ease;
@@ -259,14 +305,8 @@ h1 {
   background-position: center center;
   /*background-size:300% 100%;*/
   color: black;
-  border-color: #383838;
+  /*border-color: #383838;*/
 }
-
-.box:hover:nth-child(4) .button {
-  color: #FFFFFF;
-}
-
-
 
 .SectionHeading {
   text-align: center;
@@ -282,28 +322,75 @@ h1 {
   background: #A1A0A1;
 }
 
-.box:nth-child(8), .box:nth-child(7), .box:nth-child(6) {
-  display: none;
+@media (max-width: 423px) and (orientation: portrait) {
+  .Landing {
+    height: 100vh;
+  }
+  .content h1 {
+  font-size: 2.1rem;
+  }
+
+  #Experiences {
+    font-size: 2.3rem;
+    letter-spacing: 0.1;
+  }
+  #btn{
+    width: 220px;
+    font-size: 1rem;
+    margin-top: 100px;
+  }
+  .SectionHeading {
+    font-size: 1.5rem;
+  }
+  .SectionHeading::after {
+    content: "Mini Mobile-User"
+  }
+
+  .box {
+    min-width: 99%;
+    min-height: 290px;
+  }
+  .boxHeading {
+    padding-top: 1px;
+  }
+
+  .boxText {
+    font-size: 1rem;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .button {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6), .box:nth-child(5)  {
+    display: none;
+  }
 }
 
+
 /*mediaQuerry for mobile*/
-@media (max-width: 510px) {
+@media (max-width: 510px) and (min-width: 424px)and (orientation: portrait) {
+
   .content h1 {
-  font-size: 3rem;
-}
+  font-size: 2.5rem;
+  }
+
+  #Experiences {
+    font-size: 2.7rem;
+    letter-spacing: 0.1;
+  }
+  .SectionHeading {
+    font-size: 2rem;
+  }
   .SectionHeading::after {
     content: "Mobile-User"
   }
 
   .box {
-    max-width: 100%
-  }
-
-  .box:hover {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    overflow: hidden;
+    max-width: 100%;
   }
 
   .boxHeading {
@@ -312,7 +399,7 @@ h1 {
 
   .boxText {
     font-size: 1rem;
-    margin-top: 2%;
+    margin-top: 0px;
   }
 
   .boxHeading {
@@ -327,22 +414,124 @@ h1 {
     height: 70px;
   }
 
+  #btn{
+    width: 250px;
+    font-size: 1.1rem;
+    margin-top: 100px;
+  }
   .box {
-    min-height: 280px;
+    min-height: 300px;
+  }
+
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6), .box:nth-child(5)  {
+    display: none;
   }
 }
+/*Media-Quarry for ipad*/
+@media (min-width:511px) and (max-width: 769px) and (orientation: portrait) {
 
-@media (min-width: 511px) {
+
+  .content h1 {
+  font-size: 4rem;
+  }
+  #Experiences {
+    font-size: 5rem;
+    letter-spacing: 0.1;
+  }
+  .SectionHeading::after {
+    content: "I-Pad User";
+  }
+  #btn{
+    width: 350px;
+    font-size: 1.5rem;
+    margin-top: 200px;
+  }
+  .box:nth-child(8), .box:nth-child(7) {
+    display: none;
+  }
+
+}
+@media (min-width:770px) and (max-width: 1140px) and (orientation: portrait) {
+  .content h1 {
+  font-size: 5rem;
+  }
+  #Experiences {
+    font-size: 6rem;
+    letter-spacing: 0.1;
+  }
+  .SectionHeading::after {
+    content: "I-Pad Pro User";
+  }
+  #btn{
+    width: 350px;
+    font-size: 1.5rem;
+    margin-top: 200px;
+  }
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6) , .box:nth-child(5)  {
+    display: none;
+  }
+
+}
+@media (min-width: 1141px) and (max-width: 1600px){
+  #Experiences {
+    font-size: 5rem;
+    letter-spacing: 0.1;
+  }
+
+  #btn{
+    width: 350px;
+    font-size: 1.5rem;
+    margin-top: 25%;
+    margin-bottom: 0px;
+  }
+
   .SectionHeading::after {
     content: "Desktop-User";
   }
+  .box:nth-child(8), .box:nth-child(7) {
+    display: none;
+  }
+}
 
-  .box:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.0);
-    -o-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    overflow: hidden;
+@media (min-width: 1601px){
+  #Experiences {
+    font-size: 11rem;
+    letter-spacing: 0.1;
+  }
+
+
+  .SectionHeading::after {
+    content: "Desktop-User (>1600)";
+  }
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6) {
+    display: none;
+  }
+}
+
+
+/*
+@media (max-width: 859px) {
+  .SectionHeading::after {
+    content: "Mobile-User"
+  }
+  .container >.card {
+    width: 100%;
+    height: 600px;
+  }
+}
+@media (max-width: 1299px) and (min-width:860px) {
+  .SectionHeading::after {
+    content: "Großer Mobile-User"
+  }
+  .container >.card {
+    width: 47%;
+  }
+}
+@media (max-width: 1699px) and (min-width:1300px) {
+  .SectionHeading::after {
+    content: "Kleiner Desktop"
+  }
+  .container >.card {
+    width: 31.5%;
   }
 }
