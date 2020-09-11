@@ -2,28 +2,81 @@
 html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
+  min-width:100%;
   scroll-behavior: smooth;
+}
+*{
+  -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
 }
 
 body {
   background: #21252B;
   color: #F1F1F1;
-  font-family: 'Century Gothic', arial, sans-serif;
+  font-family: 'Century Gothic', sans-serif, arial;
   font-size: 62.5%;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
+  min-height: 200vh;
 
 }
 
-h1 {
-  /*text-align: center;*/
+header {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 40px 100px;
 }
+
+
+#Logo {
+  position: relative;
+  font-weight: 700;
+  color:white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+
+}
+
+header ul li a{
+  position: relative;
+  margin: 0 15px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+}
+
+
+
 .Landing {
   /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
-  /* background-image: url("./images/LandingBackground_blur.jpeg"); */
   background-image: url("./images/LandingBackground_blurdark.jpeg");
   background-size: cover;
   background-position: center;
@@ -66,7 +119,7 @@ h1 {
 }
 
 #Experiences {
-  font-family: 'Indie Flower',cursive;
+  font-family: 'Indie Flower', cursive;
   padding-bottom: 20px;
 
   font-size: 11rem;
@@ -113,13 +166,12 @@ h1 {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  /*display: inline;*/
 
   text-decoration: none;
   backface-visibility: hidden;
 }
 
-.ParentVH {
+.ProjectsSection{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +179,7 @@ h1 {
   padding-top: 20px;
   padding-bottom: 40px;
 }
-.ParentVHHeading {
+.HeadingDiv {
   /*makes the title above the parentBox */
   flex-basis: 100%;
   margin-bottom: 20px;
@@ -183,7 +235,6 @@ h1 {
   color: white;
   border: 2px solid black;
 }
-
 
 .box:nth-child(3) {
   background: #C0BFC0;
@@ -315,13 +366,17 @@ h1 {
   font-weight: lighter;
 }
 
-.parent {
+#ProgrammingLanguages {
   height: 100vh;
-  width: 100%;
-  display: flex;
-  background: #A1A0A1;
 }
 
+.listOuter {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/*Media Queries*/
 @media (max-width: 423px) and (orientation: portrait) {
   .Landing {
     height: 100vh;
@@ -505,33 +560,5 @@ h1 {
   }
   .box:nth-child(8), .box:nth-child(7), .box:nth-child(6) {
     display: none;
-  }
-}
-
-
-/*
-@media (max-width: 859px) {
-  .SectionHeading::after {
-    content: "Mobile-User"
-  }
-  .container >.card {
-    width: 100%;
-    height: 600px;
-  }
-}
-@media (max-width: 1299px) and (min-width:860px) {
-  .SectionHeading::after {
-    content: "Großer Mobile-User"
-  }
-  .container >.card {
-    width: 47%;
-  }
-}
-@media (max-width: 1699px) and (min-width:1300px) {
-  .SectionHeading::after {
-    content: "Kleiner Desktop"
-  }
-  .container >.card {
-    width: 31.5%;
   }
 }
