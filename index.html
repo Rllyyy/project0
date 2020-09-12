@@ -13,17 +13,14 @@
     <header>
       <a href="#" id="Logo">Logo</a>
         <ul>
-          <li> <a href="#">Home</a> </li>
-          <li> <a href="#">Test</a> </li>
-          <li> <a href="#">Service</a> </li>
-          <li> <a href="#">Team</a> </li>
-          <li> <a href="#">contact</a> </li>
+          <li> <a href="#Landing" class="HeaderLinksToSections">Home</a> </li>
+          <li> <a href="#Projects" class="HeaderLinksToSections">Projects</a> </li>
+          <li> <a href="#" class="HeaderLinksToSections">Languages</a> </li>
+          <li> <a href="#" class="HeaderLinksToSections">History</a> </li>
+          <li> <a href="#" class="HeaderLinksToSections">Contact</a> </li>
         </ul>
     </header>
-    <section class="banner">
-
-    </section>
-    <section class="Landing">
+    <section id="Landing">
       <div class="LandingContainer">
         <div class="content">
           <h1 class "Heading" id="Developing">Developing</h1>
@@ -34,6 +31,12 @@
           <a id="btn" href="#Projects">View Projects</a>
         </div>
     </section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      })
+    </script>
     <section class="ProjectsSection" id="Projects">
       <div class="HeadingDiv">
         <p class="SectionHeading">Projekte </p>

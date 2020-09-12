@@ -8,6 +8,7 @@ html, body {
   min-width:100%;
   scroll-behavior: smooth;
 }
+
 *{
   -moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -37,9 +38,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	transition: 0.6s;
-	padding: 40px 100px;
+	padding: 40px 120px;
+  z-index: 10;
 }
-
 
 #Logo {
   position: relative;
@@ -49,6 +50,7 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.6s;
+  line-height: 1;
 }
 
 header ul {
@@ -56,12 +58,13 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px 0;
 }
 
 header ul li {
   position: relative;
   list-style: none;
-
+  display: inline-block;
 }
 
 header ul li a{
@@ -70,12 +73,40 @@ header ul li a{
   font-size: 1.5rem;
   text-decoration: none;
   color: white;
-  letter-spacing: 2px;
 }
 
+header ul  li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
 
+header ul li a:hover::before{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-.Landing {
+header.sticky {
+  padding: 10px 120px;
+  background: rgba(242, 241, 242, 1);
+  /*backdrop-filter: blur(12px);*/
+}
+
+header.sticky ul li a, header.sticky #Logo {
+  color: black;
+}
+header.sticky ul li a::before {
+  background-color: black;
+}
+
+#Landing {
   /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
   background-image: url("./images/LandingBackground_blurdark.jpeg");
   background-size: cover;
@@ -102,14 +133,10 @@ header ul li a{
 }
 @keyframes LoadExpiriences {
   0% {
-
     background-position: right top;
-
   }
   100% {
-
     background-position: left center;
-
   }
 }
 #Developing {
@@ -133,7 +160,6 @@ header ul li a{
   -webkit-text-fill-color: transparent;
   animation: 3s ease 0s 1 LoadExpiriences;
 }
-
 
 #btn {
   border: 2px;
@@ -159,7 +185,7 @@ header ul li a{
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
 
-  margin: 300px auto 200px auto;
+  margin: 20vh auto 200px auto;
 
   text-transform: uppercase;
 
@@ -169,6 +195,7 @@ header ul li a{
 
   text-decoration: none;
   backface-visibility: hidden;
+  z-index: 3;
 }
 
 .ProjectsSection{
@@ -176,8 +203,8 @@ header ul li a{
   display: flex;
   flex-wrap: wrap;
   background: #282C34;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .HeadingDiv {
   /*makes the title above the parentBox */
@@ -191,7 +218,7 @@ header ul li a{
   flex-wrap: wrap;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  padding-top: 1em;
+  padding-top: 20px;
   grid-column-gap: 22px;
   grid-row-gap: 20px;
   justify-content: center;
@@ -377,8 +404,11 @@ header ul li a{
 }
 
 /*Media Queries*/
-@media (max-width: 423px) and (orientation: portrait) {
-  .Landing {
+@media screen and (max-width: 423px) and (orientation: portrait) {
+  header {
+    display: none;
+  }
+  #Landing {
     height: 100vh;
   }
   .content h1 {
@@ -428,7 +458,9 @@ header ul li a{
 
 /*mediaQuerry for mobile*/
 @media (max-width: 510px) and (min-width: 424px)and (orientation: portrait) {
-
+  header {
+    display: none;
+  }
   .content h1 {
   font-size: 2.5rem;
   }
@@ -522,28 +554,40 @@ header ul li a{
     font-size: 1.5rem;
     margin-top: 200px;
   }
-  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6) , .box:nth-child(5)  {
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6), .box:nth-child(5) {
     display: none;
   }
 
 }
+/*Media Query for small Desktops*/
 @media (min-width: 1141px) and (max-width: 1600px){
-  #Experiences {
+  header {
+    padding: 25px 40px;
+  }
+
+  header.sticky {
+    padding: 10px 40px;
+  }
+
+  #Developing {
     font-size: 5rem;
+  }
+  #Experiences {
+    font-size: 6rem;
     letter-spacing: 0.1;
   }
 
   #btn{
     width: 350px;
     font-size: 1.5rem;
-    margin-top: 25%;
+    margin-top: 20vh;
     margin-bottom: 0px;
   }
 
   .SectionHeading::after {
     content: "Desktop-User";
   }
-  .box:nth-child(8), .box:nth-child(7) {
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6), .box:nth-child(5), .box:nth-child(4) {
     display: none;
   }
 }
@@ -558,7 +602,7 @@ header ul li a{
   .SectionHeading::after {
     content: "Desktop-User (>1600)";
   }
-  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6) {
+  .box:nth-child(8), .box:nth-child(7), .box:nth-child(6), .box:nth-child(5) {
     display: none;
   }
 }
