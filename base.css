@@ -58,7 +58,7 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
 header ul li {
@@ -94,7 +94,7 @@ header ul li a:hover::before{
 }
 
 header.sticky {
-  padding: 10px 120px;
+  padding: 5px 120px;
   background: rgba(242, 241, 242, 1);
   /*backdrop-filter: blur(12px);*/
 }
@@ -108,7 +108,7 @@ header.sticky ul li a::before {
 
 #Landing {
   /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
-  background-image: url("./images/LandingBackground_blurdark.jpeg");
+  background-image: url("./images/LandingBackground_blurdarker.jpeg");
   background-size: cover;
   background-position: center;
   height: 75vh;
@@ -202,7 +202,8 @@ header.sticky ul li a::before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: #282C34;
+  background: #282C34; /*remove*/
+  background: #21252B;
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -218,7 +219,7 @@ header.sticky ul li a::before {
   flex-wrap: wrap;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  padding-top: 20px;
+  padding-top: 0px;
   grid-column-gap: 22px;
   grid-row-gap: 20px;
   justify-content: center;
@@ -343,11 +344,9 @@ header.sticky ul li a::before {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  /*display: inline;*/
   text-decoration: none;
   backface-visibility: hidden;
 }
-
 
 
 .box:nth-child(1) .button {
@@ -394,13 +393,27 @@ header.sticky ul li a::before {
 }
 
 #ProgrammingLanguages {
-  height: 100vh;
+  height: 50vh;
+  background-color: #D8D8D8;
+  color: black;
 }
 
-.listOuter {
+#ProgramContainerOuter{
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 0px;
+  grid-column-gap: 22px;
+  grid-row-gap: 20px;
   justify-content: center;
-  font-size: 1rem;
+  align-content: center;
+}
+
+.Program {
+  height: 8vh;
+  position: relative;
 }
 
 /*Media Queries*/
