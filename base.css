@@ -25,8 +25,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
-  min-height: 200vh;
-
 }
 
 header {
@@ -131,14 +129,7 @@ header.sticky ul li a::before {
   font-size: 8rem;
   line-height: 1;
 }
-@keyframes LoadExpiriences {
-  0% {
-    background-position: right top;
-  }
-  100% {
-    background-position: left center;
-  }
-}
+
 #Developing {
   text-shadow: white 0px 0px 1px;
   color: #F2F1F2;
@@ -146,19 +137,27 @@ header.sticky ul li a::before {
 }
 
 #Experiences {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower';
   padding-bottom: 20px;
 
   font-size: 11rem;
   letter-spacing: 0.5rem;
 
-  background: linear-gradient(225deg, white 22%, #F1AEFF 85%, #0054D5);
   background: linear-gradient(225deg, white 22%, rgba(241, 174, 255,1) 85%, rgba(85, 141, 227,1));
-
   background-size: 450% 105%;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: 3s ease 0s 1 LoadExpiriences;
+}
+
+@keyframes LoadExpiriences {
+  0% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left center;
+  }
 }
 
 #btn {
@@ -198,15 +197,15 @@ header.sticky ul li a::before {
   z-index: 3;
 }
 
-.ProjectsSection{
+.Section{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: #282C34; /*remove*/
   background: #21252B;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
 .HeadingDiv {
   /*makes the title above the parentBox */
   flex-basis: 100%;
@@ -215,31 +214,28 @@ header.sticky ul li a::before {
 
 .parentBox {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-top: 0px;
-  grid-column-gap: 22px;
-  grid-row-gap: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  grid-column-gap: 22px;
+  grid-row-gap: 20px;
 }
 
 .box {
+  z-index: 2;
   min-height: 300px;
   display: grid;
   max-width: 350px;
   min-width: 350px;
   background: #F2F1F2;
   border-radius: 20px;
-  /*transition: all .12s ease-in-out;* !*/
-  transform: translate(0px, 0);
-  transition: -webkit-transform 0.2s ease-in-out;
-  -webkit-transform: translate(0px, 0);
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  -moz-transform: translate(0px, 0);
-  -moz-transition: -moz-transform 0.2s ease-in-out;
+  background-color: white;
+  position: relative;
   overflow: hidden;
 }
 
@@ -283,11 +279,9 @@ header.sticky ul li a::before {
   border: 2px solid black;
 }
 
-
 .boxInside {
   position: relative;
-  /*Fixes the text-jaggering on the hovering event for Firefox*/
-  -moz-transform: rotate(0.02deg);
+  z-index: 20;
 }
 
 .boxHeading {
@@ -309,6 +303,7 @@ header.sticky ul li a::before {
   margin-left: 14%;
   margin-right: 12%;
   padding-top: 5px;
+
 }
 
 .imageBox {
@@ -333,7 +328,6 @@ header.sticky ul li a::before {
   text-align: center;
   color: #616161;
   font-size: 1.1rem;
-  /*font-weight: bold;*/
   width: 80%;
   position: absolute;
   bottom: 25px;
@@ -365,7 +359,6 @@ header.sticky ul li a::before {
 
 .box:nth-child(3) .button {
   background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
-  background: linear-gradient(225deg, white 22%, #F1AEFF 35%, #0054D5);
   background-size: 450% 105%;
   background-position: right top;
   transition: all 0.7s ease;
@@ -380,9 +373,7 @@ header.sticky ul li a::before {
 
 .box:hover .button {
   background-position: center center;
-  /*background-size:300% 100%;*/
   color: black;
-  /*border-color: #383838;*/
 }
 
 .SectionHeading {
@@ -390,14 +381,26 @@ header.sticky ul li a::before {
   margin: 0px;
   font-size: 2.5rem;
   font-weight: lighter;
+  overflow: auto; /*<< added */
 }
 
 #ProgrammingLanguages {
-  height: 50vh;
   background-color: #D8D8D8;
+  position: relative;
   color: black;
+  min-height: 100vh
 }
 
+#ProgrammingHeadContainer {
+  padding-top: 50px;
+}
+
+#ProgramIconContainer {
+  /*align-items: flex-start;*/
+  margin-top: 20px;
+}
+
+/*
 #ProgramContainerOuter{
   width: 100%;
   display: flex;
@@ -409,11 +412,27 @@ header.sticky ul li a::before {
   grid-row-gap: 20px;
   justify-content: center;
   align-content: center;
-}
+} */
 
 .Program {
-  height: 8vh;
+  height:110px;
+
   position: relative;
+
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+
+  transition: all 0.5s ease;
+}
+
+.Program:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  filter: none;
 }
 
 /*Media Queries*/
@@ -610,7 +629,6 @@ header.sticky ul li a::before {
     font-size: 11rem;
     letter-spacing: 0.1;
   }
-
 
   .SectionHeading::after {
     content: "Desktop-User (>1600)";

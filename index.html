@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Webpage</title>
+    <title>Niklas Fischer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/57847380?s=460&u=83a3183d5a5dad9d72ef48de1c87cba06f7ed5a9&v=4">
     <style>
       /*@import url('animation.css');*/
       @import "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
@@ -15,7 +16,7 @@
         <ul>
           <li> <a href="#Landing" class="HeaderLinksToSections">Home</a> </li>
           <li> <a href="#Projects" class="HeaderLinksToSections">Projects</a> </li>
-          <li> <a href="#" class="HeaderLinksToSections">Languages</a> </li>
+          <li> <a href="#ProgrammingLanguages" class="HeaderLinksToSections">Languages</a> </li>
           <li> <a href="#" class="HeaderLinksToSections">History</a> </li>
           <li> <a href="#" class="HeaderLinksToSections">Contact</a> </li>
         </ul>
@@ -37,7 +38,7 @@
         header.classList.toggle("sticky", window.scrollY > 0);
       })
     </script>
-    <section class="ProjectsSection" id="Projects">
+    <section class="Section" id="Projects">
       <div class="HeadingDiv">
         <p class="SectionHeading">Projekte </p>
       </div>
@@ -100,15 +101,16 @@
       </div>
   </section>
   <section id="ProgrammingLanguages">
-    <div class= "HeadingDiv">
+    <div id="ProgrammingHeadContainer">
       <p class="SectionHeading">Programming Languages </p>
     </div>
-    <div id="ProgramContainerOuter">
+
+    <div class="parentBox" id="ProgramIconContainer">
       <a href="#">
         <img class="Program" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/C_Sharp_logo.svg" alt="C# Logo"/>
       </a>
       <a href="#">
-        <img class="Program" src="https://mpng.subpng.com/20180712/fct/kisspng-visual-basic-for-applications-microsoft-excel-macr-viber-logo-5b47b096a9bdb7.4881573615314249186953.jpg" alt="VBA Logo"/>
+        <img class="Program" src="https://zappysys.com/blog/wp-content/uploads/2019/06/VBA_250x250.png" alt="VBA Logo"/>
       </a>
       <a href="#">
         <img class="Program" src="https://e7.pngegg.com/pngimages/114/535/png-clipart-mysql-cluster-database-management-system-oracle-sql-logo-blue-text-thumbnail.png" alt="MySQL Logo"/>
@@ -131,6 +133,9 @@
       <span class="Program">Django</span>
       <span class="Program">Flask</span> -->
     </div>
-  </section>
+</section>
+
+
+
   </body>
 </html>
