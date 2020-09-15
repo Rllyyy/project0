@@ -236,7 +236,7 @@ header.sticky ul li a::before {
   min-width: 350px;
   background: #F2F1F2;
   border-radius: 20px;
-  background-color: white;
+  background-color: #F2F1F2;
   position: relative;
   overflow: hidden;
 }
