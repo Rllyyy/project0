@@ -29,6 +29,26 @@ body {
   /* -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased; */
   position: relative;
+
+}
+
+/*******************CSS for the scroll-bar************/
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: grey black;
 }
 
 img {
