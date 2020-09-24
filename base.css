@@ -14,8 +14,6 @@ html, body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 
-
-
 	margin:0;
 	padding:0;
 }
@@ -28,11 +26,14 @@ body {
   line-height: 1.5;
   /* -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased; */
-  position: relative;
 
 }
 
-/*******************CSS for the scroll-bar************/
+img {
+  display: block;
+}
+
+/**************************************CSS for the scroll-bar************************************/
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -46,15 +47,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid grey;
 }
 
+/*Custom scroll-bar for firefox*/
 * {
   scrollbar-width: thin;
   scrollbar-color: grey black;
 }
+/****************************************End of custom scroll-bar*********************************/
 
-img {
-  display: block;
-}
-
+/****************************************Header***************************************************/
 header {
 	position: fixed;
 	top:0;
@@ -64,7 +64,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	transition: 0.6s;
-	padding: 50px 100px;
+	padding: 50px 50px 50px 100px;
   z-index: 10;
 }
 
@@ -84,13 +84,13 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 0;
 }
 
 header ul li {
   position: relative;
   list-style: none;
   display: inline-block;
+  line-height: 1.6;
 }
 
 header ul li a{
@@ -120,7 +120,7 @@ header ul li a:hover::before{
 }
 
 header.sticky {
-  padding: 2px 100px;
+  padding: 0px 50px 0px 100px;
   background: black;
 }
 
@@ -130,6 +130,7 @@ header.sticky ul li a, header.sticky #Logo {
 header.sticky ul li a::before {
   /*background-color: black;*/
 }
+/******************************************End of Header****************************************/
 
 #Landing {
   /*source:https://www.pexels.com/de-de/foto/code-daten-dunkel-html-2653362/*/
@@ -169,7 +170,7 @@ header.sticky ul li a::before {
 #Experiences {
   font-family: 'Indie Flower';
   font-family: 'Inconsolata', monospace;
-  font-family: 'Century Gothic';
+  font-family: 'Century Gothic'; */
   padding-bottom: 20px;
 
   font-size: 11rem;
@@ -180,7 +181,7 @@ header.sticky ul li a::before {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: 3s ease 0s 1 LoadExpiriences;
+  animation: 5s ease 0s 1 LoadExpiriences;
 }
 
 @keyframes LoadExpiriences {
@@ -334,8 +335,8 @@ header.sticky ul li a::before {
   display: flex;
   color: #383838;
   line-height: 1.3;
-  margin-left: 14%;
-  margin-right: 12%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 5px;
 
 }
@@ -480,7 +481,7 @@ grid-row-gap: 20px;
 }
 
 #AcademicAssignments {
-  min-height: 100vh;
+  min-height: 150vh;
   background-color: #131418;
 }
 

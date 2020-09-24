@@ -12,13 +12,14 @@
     </style>
   </head>
   <body>
+    <script type="text/javascript" src="main.js"></script>
     <header>
       <a href="#Landing" id="Logo"> 4Points Interactive</a>
         <ul>
           <li> <a href="#Landing" class="HeaderLinksToSections">Home</a> </li>
-          <li> <a href="#Projects" class="HeaderLinksToSections">Projects</a> </li>
-          <li> <a href="#Technologies" class="HeaderLinksToSections">Technologies</a> </li>
-          <li> <a href="#AcademicAssignments" class="HeaderLinksToSections">Academic Assignments</a> </li>
+          <li id="ProjectsLink" > <a href="#Projects" class="HeaderLinksToSections">Projects</a> </li>
+          <li id="TechnologiesLink"> <a href="#Technologies" class="HeaderLinksToSections">Technologies</a> </li>
+          <li id="AcademicAssignmentsLink"> <a href="#AcademicAssignments" class="HeaderLinksToSections">Academic Assignments</a> </li>
           <li> <a href="#" class="HeaderLinksToSections">History</a> </li>
           <li> <a href="#" class="HeaderLinksToSections">Contact</a> </li>
         </ul>
@@ -26,23 +27,17 @@
     <section id="Landing">
       <div class="LandingContainer">
         <div class="content">
-          <h1 class "Heading" id="Developing">Developing</h1>
-          <h1 class "Heading" id="Experiences">Experiences</h1>
+          <h1 class="Heading" id="Developing">Developing</h1>
+          <h1 class="Heading" id="Experiences">Experiences</h1>
         </div>
         </div>
         <div class="ProjectButton">
-          <a id="btn" href="#Projects">View Projects</a>
+          <a id="btn" href="#Projects"> <span>View Projects</span></a>
         </div>
     </section>
-    <script type="text/javascript">
-      window.addEventListener("scroll", function(){
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      })
-    </script>
     <section class="Section" id="Projects">
       <div class="HeadingDiv">
-        <p class="SectionHeading">Projekte </p>
+        <p class="SectionHeading">Projects </p>
       </div>
       <div class="parentBox">
         <div class="box">
@@ -115,7 +110,8 @@
       </a>
 
       <a href="#">
-        <img class="Program" src="https://raw.githubusercontent.com/Rllyyy/project0/0add142c12076279f4ed9e4b535ce5c1907f54d5/icons/MySQLIcon.svg?example=foo&sanitize=true"  alt="MySQL Logo"/>
+        <img class="Program" src="https://raw.githubusercontent.com/Rllyyy/project0/master/icons/MySQLIcon.svg?example=foo&sanitize=true"  alt="MySQL Logo"/>
+
         <!--https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg https://raw.githubusercontent.com/Rllyyy/project0/0add142c12076279f4ed9e4b535ce5c1907f54d5/icons/MySQLIcon.svg?example=foo&sanitize=true-->
       </a>
       <a href="#">
