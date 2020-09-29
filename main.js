@@ -1,48 +1,46 @@
-
-
 /*Script for sticky Header*/
-window.addEventListener("scroll", function(){
-  const header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
 });
 
-/*Script to make the background of the current section grey*/
-/*TODO: Make this better, cause this very ugly*/
-window.addEventListener("scroll", function() {
-  const elementTarget = document.getElementById("Projects");
-  const elementBottom = elementTarget.offsetTop + elementTarget.offsetHeight;
+window.addEventListener('scroll', function () {
+  const elementProjects = document.getElementById('Projects');
+  const elementProjectsBottom = elementProjects.offsetTop + elementProjects.offsetHeight;
 
-  if (window.scrollY >= (elementTarget.offsetTop -45) && window.scrollY <= (elementBottom -80))
-  {
-    document.getElementById("ProjectsLink").style.backgroundColor = "#222222";
-  }else
-  {
-    document.getElementById("ProjectsLink").style.backgroundColor = "transparent";
+  const elementTechnologies = document.getElementById('Technologies');
+  const elementTechnologiesBottom = elementTechnologies.offsetTop + elementTechnologies.offsetHeight;
+
+  const elementAcademicAssignments = document.getElementById('AcademicAssignments');
+  const elementAcademicAssignmentsBottom = elementAcademicAssignments.offsetTop + elementAcademicAssignments.offsetHeight;
+
+  //set all backgrounds to transparent
+  document.getElementById('ProjectsLink').style.backgroundColor = 'transparent';
+  document.getElementById('TechnologiesLink').style.backgroundColor = 'transparent';
+  document.getElementById('AcademicAssignmentsLink').style.backgroundColor = 'transparent';
+
+  if (window.scrollY >= elementProjects.offsetTop - 45 && window.scrollY <= elementProjectsBottom - 40) {
+    document.getElementById('ProjectsLink').style.backgroundColor = '#222222';
+  } else if (window.scrollY >= elementTechnologies.offsetTop - 45 && window.scrollY <= elementTechnologiesBottom - 40) {
+    document.getElementById('TechnologiesLink').style.backgroundColor = '#222222';
+  } else if (window.scrollY >= elementAcademicAssignments.offsetTop - 45 && window.scrollY <= elementAcademicAssignmentsBottom - 40) {
+    document.getElementById('AcademicAssignmentsLink').style.backgroundColor = '#222222';
   }
 });
 
-window.addEventListener("scroll", function() {
-  const elementTarget = document.getElementById("Technologies");
-  const elementBottom = elementTarget.offsetTop + elementTarget.offsetHeight;
+/* let buttons = document.querySelectorAll('[id^="btn]'); */
+const btn = document.getElementById('btn');
 
-  if (window.scrollY >= (elementTarget.offsetTop -45) && window.scrollY <= (elementBottom -40))
-  {
-    document.getElementById("TechnologiesLink").style.backgroundColor = "#222222";
-  }else
-  {
-    document.getElementById("TechnologiesLink").style.backgroundColor = "transparent";
-  }
-});
+btn.addEventListener('mouseenter', function (e) {
+  let x = e.clientX - e.target.offsetLeft;
+  let y = e.clientY - e.target.offsetTop;
 
-window.addEventListener("scroll", function() {
-  const elementTarget = document.getElementById("AcademicAssignments");
-  const elementBottom = elementTarget.offsetTop + elementTarget.offsetHeight;
-
-  if (window.scrollY >= (elementTarget.offsetTop -45) && window.scrollY <= (elementBottom -40))
-  {
-    document.getElementById("AcademicAssignmentsLink").style.backgroundColor = "#222222";
-  }else
-  {
-    document.getElementById("AcademicAssignmentsLink").style.backgroundColor = "transparent";
-  }
+  let ripples = document.createElement('span');
+  ripples.style.left = x + 'px';
+  ripples.style.top = y + 'px';
+  btn.appendChild(ripples);
+  console.log('Hello');
+  setTimeout(() => {
+    ripples.remove();
+  }, 1000);
 });
