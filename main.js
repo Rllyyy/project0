@@ -39,7 +39,6 @@ btn.addEventListener('mouseenter', function (e) {
   ripples.style.left = x + 'px';
   ripples.style.top = y + 'px';
   btn.appendChild(ripples);
-  console.log('Hello');
   setTimeout(() => {
     ripples.remove();
   }, 1000);

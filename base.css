@@ -160,9 +160,7 @@ header.sticky {
   font-family: 'Indie Flower';
   font-family: 'Inconsolata', monospace;
 }
-#ExperienceContainer {
-  display: inline;
-}
+
 #Experiences {
   font-family: 'Century Gothic';
 
@@ -177,69 +175,6 @@ header.sticky {
 
   -webkit-text-fill-color: transparent;
   animation: 5s ease 0s 1 LoadExperiences;
-}
-
-#blinking-cursor {
-  font-family: 'Century Gothic';
-  font-size: 11rem;
-  color: #f2b8ff;
-
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink ease infinite;
-  margin-left: -40px;
-}
-
-@keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #f2b8ff;
-  }
-}
-
-@-moz-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #f2b8ff;
-  }
-}
-
-@-webkit-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #f2b8ff;
-  }
-}
-
-@-ms-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #f2b8ff;
-  }
-}
-
-@-o-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #f2b8ff;
-  }
 }
 
 @keyframes LoadExperiences {
@@ -667,6 +602,9 @@ header.sticky {
     font-size: 2.7rem;
     letter-spacing: 0.1;
   }
+  #blinking-cursor {
+    display: none;
+  }
   .SectionHeading {
     font-size: 2rem;
   }
@@ -724,6 +662,9 @@ header.sticky {
     font-size: 5rem;
     letter-spacing: 0.1;
   }
+  #blinking-cursor {
+    display: none;
+  }
   .SectionHeading::after {
     content: 'I-Pad User';
   }
@@ -740,6 +681,9 @@ header.sticky {
 @media (min-width: 770px) and (max-width: 1140px) and (orientation: portrait) {
   .content h1 {
     font-size: 5rem;
+  }
+  #blinking-cursor {
+    display: none;
   }
   #Experiences {
     font-size: 6rem;
