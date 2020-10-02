@@ -281,10 +281,13 @@ header.sticky {
 
 .box {
   z-index: 2;
-  min-height: 300px;
+  min-height: 350px;
   display: grid;
+  /*
   max-width: 350px;
   min-width: 350px;
+  */
+  width: 300px;
   background: #f2f1f2;
   border-radius: 20px;
   background-color: #f2f1f2;
@@ -293,45 +296,45 @@ header.sticky {
 }
 
 /*!remove Test if darker Mode is better*/
-/*
+
 .box:nth-child(2) {
-  background: #1C1E22;
+  background: #1c1e22;
 }
 
-.box:nth-child(2) .boxText{
-  color: #C8C8C8;
+.box:nth-child(2) .boxText {
+  color: #c8c8c8;
 }
-.box:nth-child(2) .imageBox, .box:nth-child(2) img{
-  background-color: #6F7277;
+.box:nth-child(2) .imageBox,
+.box:nth-child(2) img {
+  background-color: #6f7277;
 }
 
-.box:nth-child(2) .boxHeading{
+.box:nth-child(2) .boxHeading {
   color: white;
-}
-.box:nth-child(2) a{
-  color: white;
-  border: 2px solid black;
 }
 
 .box:nth-child(3) {
-  background: #C0BFC0;
+  background: linear-gradient(225deg, #f1aeff, #f1aeff 10%, #0054d5);
+}
+.box:nth-child(3) img {
+  background: transparent;
 }
 
-.box:nth-child(3) .boxText{
-  color: #383838;
-}
-.box:nth-child(3) .imageBox, .box:nth-child(3) img{
-  background-color: #F2F1F2;
+.box:nth-child(3) .imageBox {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.box:nth-child(3) .boxHeading{
+.box:nth-child(3) .boxText {
   color: black;
 }
-.box:nth-child(3) a{
-  color: #383838;
-  border: 2px solid black;
+
+.box:nth-child(3) .boxHeading {
+  color: black;
 }
-*/
+.box:nth-child(3) a {
+  color: #383838;
+}
+
 .boxInside {
   position: relative;
   z-index: 20;
@@ -497,41 +500,46 @@ header.sticky {
   filter: none;
 }
 
+.ContainerForTransparentImages {
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+#InkscapeIcon {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 110px;
+  opacity: 0;
+}
+#InkscapeIconTransparent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 110px;
+  opacity: 1;
+}
+
+#MarkdownIcon {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 110px;
+  opacity: 0;
+}
+
+#MarkdownIconTransparent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 110px;
+  opacity: 1;
+}
+
 #AcademicAssignments {
   min-height: 150vh;
   background-color: #131418;
-}
-
-#MarkdownContainer {
-  position: relative;
-  /* background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 90%); */
-  background: rgba(0, 0, 0, 0);
-
-  -webkit-transition: background 0.5s ease;
-  -moz-transition: background 0.5s ease;
-  -o-transition: background 0.5s ease;
-  transition: background 0.5s ease;
-
-  cursor: pointer;
-  border: 2px solid black;
-  border-radius: 14px;
-  overflow: hidden;
-  background-clip: padding-box;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-}
-#MarkdownIcon {
-  height: 110px;
-
-  position: relative;
-  border: 10px solid black;
-  border-radius: 1px;
-  /* background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0) 10%, white 10%, white 90%, rgba(0, 0, 0, 0) 90%); */
-}
-
-#MarkdownContainer:hover {
-  /* background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0, 0, 0, 1) 10%, white 10%, white 93%, rgba(0, 0, 0, 1) 93%); */
-  background: rgba(255, 255, 255, 1);
 }
 
 /*Media Queries*/
@@ -658,6 +666,7 @@ header.sticky {
   .content h1 {
     font-size: 4rem;
   }
+
   #Experiences {
     font-size: 5rem;
     letter-spacing: 0.1;
@@ -682,8 +691,11 @@ header.sticky {
   .content h1 {
     font-size: 5rem;
   }
-  #blinking-cursor {
-    display: none;
+  header {
+    padding: 50px 0px 0px 20px;
+  }
+  header ul li a {
+    font-size: 1.2rem;
   }
   #Experiences {
     font-size: 6rem;
