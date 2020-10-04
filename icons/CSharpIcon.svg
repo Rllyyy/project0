@@ -1,46 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" width="455" height="500" viewBox="-26 -20 507 552"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xml:space="preserve">
-	<defs>
-		<clipPath id="hexagon">
-			<path d="M435.279,113.284L247.191,4.692c-10.835-6.257-28.567-6.257-39.402,0L19.701,113.284
-				C8.865,119.539,0,134.896,0,147.408v217.185c0.843,14.571,8.286,26.639,19.701,34.123l188.088,108.592
-				c10.835,6.257,28.567,6.257,39.402,0l188.088-108.592c12.248-8.146,19.219-20.408,19.701-34.123V147.408
-				C454.54,134.243,446.657,120.965,435.279,113.284z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="410"
+   height="461"
+   viewBox="-26 -20 456.85695 508.944"
+   xml:space="preserve"
+   id="svg40"
+   sodipodi:docname="CSharpIcon.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
+   id="metadata44"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="2166"
+   inkscape:window-height="1220"
+   id="namedview42"
+   showgrid="false"
+   inkscape:zoom="8.2365759"
+   inkscape:cx="351.66976"
+   inkscape:cy="241.30036"
+   inkscape:window-x="0"
+   inkscape:window-y="173"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg40" />
+	<defs
+   id="defs20">
+		<clipPath
+   id="hexagon">
+			<path
+   d="M 435.279,113.284 247.191,4.692 c -10.835,-6.257 -28.567,-6.257 -39.402,0 L 19.701,113.284 C 8.865,119.539 0,134.896 0,147.408 v 217.185 c 0.843,14.571 8.286,26.639 19.701,34.123 l 188.088,108.592 c 10.835,6.257 28.567,6.257 39.402,0 L 435.279,398.716 c 12.248,-8.146 19.219,-20.408 19.701,-34.123 V 147.408 c -0.44,-13.165 -8.323,-26.443 -19.701,-34.124 z"
+   id="path2" />
 		</clipPath>
 
-		<linearGradient id="top" gradientUnits="userSpaceOnUse" x1="121.0946" y1="55.8074" x2="261.7725" y2="235.867">
-			<stop offset="0" style="stop-color: #A47EDE"/>
-			<stop offset="1" style="stop-color: #9866D3"/>
+		<linearGradient
+   id="top"
+   gradientUnits="userSpaceOnUse"
+   x1="121.0946"
+   y1="55.8074"
+   x2="261.77249"
+   y2="235.867">
+			<stop
+   offset="0"
+   style="stop-color: #A47EDE"
+   id="stop5" />
+			<stop
+   offset="1"
+   style="stop-color: #9866D3"
+   id="stop7" />
 		</linearGradient>
 
-		<linearGradient id="centre" gradientUnits="userSpaceOnUse" x1="314.1754" y1="207.291" x2="443.4638" y2="372.7726">
-			<stop offset="0" style="stop-color: #3B009B"/>
-			<stop offset="1" style="stop-color: #390086"/>
+		<linearGradient
+   id="centre"
+   gradientUnits="userSpaceOnUse"
+   x1="314.17542"
+   y1="207.291"
+   x2="443.46381"
+   y2="372.77261">
+			<stop
+   offset="0"
+   style="stop-color: #3B009B"
+   id="stop10" />
+			<stop
+   offset="1"
+   style="stop-color: #390086"
+   id="stop12" />
 		</linearGradient>
 
-		<linearGradient id="bottom" gradientUnits="userSpaceOnUse" x1="115.2882" y1="326.1631" x2="252.7405" y2="502.094">
-			<stop offset="0" style="stop-color: #340084"/>
-			<stop offset="1" style="stop-color: #290064"/>
+		<linearGradient
+   id="bottom"
+   gradientUnits="userSpaceOnUse"
+   x1="115.2882"
+   y1="326.16309"
+   x2="252.74049"
+   y2="502.09399">
+			<stop
+   offset="0"
+   style="stop-color: #340084"
+   id="stop15" />
+			<stop
+   offset="1"
+   style="stop-color: #290064"
+   id="stop17" />
 		</linearGradient>
 	</defs>
 
-	<g clip-path="url(#hexagon)">
-		<rect fill="url(#centre)" x="222.588" y="124.487" width="267.464" height="273.493"/>
-		<polygon fill="url(#bottom)" points="490.052,407.802 145.845,208.63 -29.911,208.63 -29.911,538.353 490.052,538.353"/>
-		<polygon fill="url(#top)" points="-29.911,405.093 490.052,104.208 490.052,-14.513 -29.911,-14.513"/>
-	</g>
+	
 
-	<path id="c" fill="#fff" d="M75.83,256.001c-0.891-148.089,197.459-213.479,282.996-75.878l-65.635,37.98
-		c-39.622-65.534-138.001-42.101-141.532,37.897c1.06,73.729,97.754,107.978,141.536,37.893l65.635,37.979
-		C283.448,462.735,79.632,415.653,75.83,256.001z"/>
+	
 
-	<g id="sharp" aria-label="&#x266F;" data-name="&#x266F;">
-		<polygon fill="#fff" points="326,213 338.5,213 329.959,295.5 317.224,295.5"/>
-		<polygon fill="#fff" points="352.776,213 365.276,213 356.735,295.5 344,295.5"/>
-		<rect fill="#fff" x="312" y="232.592" width="62.5" height="12.072"/>
-		<rect fill="#fff" x="308.5" y="262" width="62.5" height="12.072"/>
-	</g>
+	<g
+   id="g897"
+   transform="translate(-25.34734,-21.249854)"><g
+     clip-path="url(#hexagon)"
+     id="g28">
+		<rect
+   fill="url(#centre)"
+   x="222.588"
+   y="124.487"
+   width="267.46399"
+   height="273.49301"
+   id="rect22"
+   style="fill:url(#centre)" />
+		<polygon
+   fill="url(#bottom)"
+   points="490.052,538.353 490.052,407.802 145.845,208.63 -29.911,208.63 -29.911,538.353 "
+   id="polygon24"
+   style="fill:url(#bottom)" />
+		<polygon
+   fill="url(#top)"
+   points="-29.911,405.093 490.052,104.208 490.052,-14.513 -29.911,-14.513 "
+   id="polygon26"
+   style="fill:url(#top)" />
+	</g><g
+     id="g883"><path
+       id="c"
+       fill="#ffffff"
+       d="M 75.83,256.001 C 74.939,107.912 273.289,42.522 358.826,180.123 l -65.635,37.98 C 253.569,152.569 155.19,176.002 151.659,256 c 1.06,73.729 97.754,107.978 141.536,37.893 l 65.635,37.979 c -75.382,130.863 -279.198,83.781 -283,-75.871 z" /><g
+       id="g874"><g
+         id="sharp"
+         aria-label="♯"
+         data-name="♯">
+		<polygon
+   fill="#ffffff"
+   points="326,213 338.5,213 329.959,295.5 317.224,295.5 "
+   id="polygon31" />
+		<polygon
+   fill="#ffffff"
+   points="352.776,213 365.276,213 356.735,295.5 344,295.5 "
+   id="polygon33" />
+		<rect
+   fill="#ffffff"
+   x="312"
+   y="232.592"
+   width="62.5"
+   height="12.072"
+   id="rect35" />
+		<rect
+   fill="#ffffff"
+   x="308.5"
+   y="262"
+   width="62.5"
+   height="12.072"
+   id="rect37" />
+	</g></g></g></g>
 </svg>

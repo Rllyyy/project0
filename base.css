@@ -298,23 +298,30 @@ header.sticky {
 /*!remove Test if darker Mode is better*/
 
 .box:nth-child(2) {
-  background: #1c1e22;
+  background: #2b2e33;
 }
 
 .box:nth-child(2) .boxText {
-  color: #c8c8c8;
+  color: #e0e0e0;
 }
 .box:nth-child(2) .imageBox,
 .box:nth-child(2) img {
-  background-color: #6f7277;
+  background-color: #494d52;
 }
 
 .box:nth-child(2) .boxHeading {
-  color: white;
+  color: #7f78cc;
 }
 
 .box:nth-child(3) {
   background: linear-gradient(225deg, #f1aeff, #f1aeff 10%, #0054d5);
+}
+
+.box:nth-child(2) .button {
+  background: linear-gradient(225deg, #4c4f53 23%, #4c4f53 45%, #f1aeff 45%, #7f78cc);
+  background-size: 450% 105%;
+  background-position: right top;
+  transition: all 1s ease;
 }
 .box:nth-child(3) img {
   background: transparent;
@@ -434,7 +441,7 @@ header.sticky {
 }
 */
 .box:hover .button {
-  background-position: center center;
+  background-position: left bottom;
   color: black;
 }
 
